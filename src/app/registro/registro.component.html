@@ -1,1 +1,57 @@
-<p>registro works!</p>
+<div class="form-container">
+  <!-- Título con ngStyle -->
+  <h1 [ngStyle]="{ color: registroForm.valid ? 'green' : 'red' }">
+    Formulario de Registro
+  </h1>
+
+  <p>Completa los siguientes datos para registrarte en nuestra plataforma.</p>
+
+  <!-- Mensaje de éxito con *ngIf -->
+  <div *ngIf="formularioEnviado" class="success-message">
+    ✅ Formulario enviado correctamente
+  </div>
+
+  <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+    <!-- Campo Nombre -->
+    <div class="form-group">
+      <label>Nombre:</label>
+      <input
+        type="text"
+        formControlName="nombre"
+        [ngClass]="{
+          'campo-invalido': f['nombre'].invalid && f['nombre'].touched,
+        }"
+      />
+
+      <!-- Lista de errores con *ngFor -->
+      <ul class="errores" *ngIf="f['nombre'].invalid && f['nombre'].touched">
+        <li *ngFor="let error of erroresNombre">{{ error }}</li>
+      </ul>
+    </div>
+
+    <!-- Campo Email -->
+    <div class="form-group">
+      <label>Email:</label>
+      <input
+        type="email"
+        formControlName="email"
+        [ngClass]="{
+          'campo-invalido': f['email'].invalid && f['email'].touched,
+        }"
+      />
+
+      <ul class="errores" *ngIf="f['email'].invalid && f['email'].touched">
+        <li *ngFor="let error of erroresEmail">{{ error }}</li>
+      </ul>
+    </div>
+
+    <!-- Campo Mensaje -->
+    <div class="form-group">
+      <label>Mensaje (opcional):</label>
+      <textarea formControlName="mensaje"></textarea>
+    </div>
+
+    <!-- Botón deshabilitado si el formulario es inválido -->
+    <button type="submit" [disabled]="registroForm.invalid">Enviar</button>
+  </form>
+</div>
