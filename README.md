@@ -88,9 +88,9 @@ Agregar aquí una captura mostrando:
 - Mensajes de error visibles.
 - Botón deshabilitado.
 
-![Formulario con errores](src/assets/capturas/formulario-error-datos-obligatorios.JPG)
+![Formulario con errores](./src/assets/capturas/formulario-error-datos-obligatorios.JPG)
 
-![Formulario con errores](src/assets/capturas/formulario-error-longitud-mailFormato.jpg)
+![Formulario con errores](./src/assets/capturas/formulario-error-longitud-mailFormato.jpg)
 
 ---
 
@@ -102,7 +102,7 @@ Agregar aquí una captura mostrando:
 - Estilos aplicados con formulario válido.
 - Botón habilitado.
 
-![Formulario válido](src/assets/capturas/formulario-valido.jpg)
+![Formulario válido](./src/assets/capturas/formulario-valido.jpg)
 
 ---
 
