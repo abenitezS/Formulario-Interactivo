@@ -20,7 +20,15 @@ export class RegistroComponent {
 
   constructor(private fb: FormBuilder) {
     this.registroForm = this.fb.group({
-      nombre: ['', [Validators.required, Validators.minLength(3)]],
+      nombre: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(3),
+          Validators.maxLength(50),
+          Validators.pattern(/^[a-zA-Z\s]+$/),
+        ],
+      ],
       email: ['', [Validators.required, Validators.email]],
       mensaje: [''],
     });
@@ -36,6 +44,10 @@ export class RegistroComponent {
       errores.push('El nombre es obligatorio');
     if (this.f['nombre']?.hasError('minlength'))
       errores.push('El nombre debe tener al menos 3 caracteres');
+    if (this.f['nombre']?.hasError('maxlength'))
+      errores.push('El nombre no debe tener más de 50 caracteres');
+    if (this.f['nombre']?.hasError('pattern'))
+      errores.push('El nombre solo puede contener letras y espacios');
     return errores;
   }
 
@@ -45,6 +57,7 @@ export class RegistroComponent {
       errores.push('El email es obligatorio');
     if (this.f['email']?.hasError('email'))
       errores.push('El email no tiene un formato válido');
+
     return errores;
   }
 

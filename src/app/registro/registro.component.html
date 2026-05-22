@@ -7,9 +7,9 @@
   <p>Completa los siguientes datos para registrarte en nuestra plataforma.</p>
 
   <!-- Mensaje de éxito con *ngIf -->
-  <div *ngIf="formularioEnviado" class="success-message">
-    ✅ Formulario enviado correctamente
-  </div>
+  @if (formularioEnviado) {
+    <div class="success-message">✅ Formulario enviado correctamente</div>
+  }
 
   <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
     <!-- Campo Nombre -->
@@ -25,7 +25,9 @@
 
       <!-- Lista de errores con *ngFor -->
       <ul class="errores" *ngIf="f['nombre'].invalid && f['nombre'].touched">
-        <li *ngFor="let error of erroresNombre">{{ error }}</li>
+        @for (errorNombre of erroresNombre; track $index) {
+          <li>{{ errorNombre }}</li>
+        }
       </ul>
     </div>
 
@@ -39,10 +41,13 @@
           'campo-invalido': f['email'].invalid && f['email'].touched,
         }"
       />
-
-      <ul class="errores" *ngIf="f['email'].invalid && f['email'].touched">
-        <li *ngFor="let error of erroresEmail">{{ error }}</li>
-      </ul>
+      @if (f["email"].invalid && f["email"].touched) {
+        <ul class="errores">
+          @for (errorEmail of erroresEmail; track $index) {
+            <li>{{ errorEmail }}</li>
+          }
+        </ul>
+      }
     </div>
 
     <!-- Campo Mensaje -->
