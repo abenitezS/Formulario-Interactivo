@@ -81,10 +81,10 @@ http://localhost:4200/
 
 ### Formulario con errores de validación
 
-Agregar aquí una captura mostrando:
+Capturas mostrando:
 
-- Campo nombre vacío o con menos de 3 caracteres.
-- Campo email inválido.
+- Nombre vacío o con menos de 3 caracteres.
+- Email inválido.
 - Mensajes de error visibles.
 - Botón deshabilitado.
 
@@ -96,19 +96,19 @@ Agregar aquí una captura mostrando:
 
 ### Formulario válido
 
-Agregar aquí una captura mostrando:
+Se muestra captura:
 
-- Todos los campos completos correctamente.
+- Todos los datos completos correctamente.
 - Estilos aplicados con formulario válido.
 - Botón habilitado.
 
-![Formulario válido](./src/assets/capturas/formulario-valido.jpg)
+![Formulario válido](./src/assets/capturas/formulario-valido.JPG)
 
 ---
 
 ### Formulario enviado correctamente
 
-- Mensaje “Formulario enviado”.
+- Mensaje “Formulario enviado”. A los 5 segundos desaparece mensaje.
 - Formulario reseteado.
 
 ![Formulario enviado](./src/assets/capturas/formulario-enviado.png)
