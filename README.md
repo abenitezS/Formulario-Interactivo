@@ -1,59 +1,163 @@
-# FormularioInteractivo
+# Formulario Interactivo - Angular 19.2
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.6.
+## Descripción del proyecto
 
-## Development server
+Este proyecto consiste en el desarrollo de un formulario interactivo utilizando Angular 19.2 y formulario reactivo.  
+Se implementaron validaciones dinámicas y directivas propias de Angular.
 
-To start a local development server, run:
+El formulario incluye los siguientes campos:
+
+- Nombre (obligatorio y mínimo 3 caracteres)
+- Email (obligatorio y con formato válido)
+- Mensaje (opcional)
+
+Además, se aplicaron las siguientes funcionalidades:
+
+- Uso de `*ngIf` para mostrar mensajes de envío exitoso.
+- Uso de `*ngFor` para listar errores de validación.
+- Uso de `[ngClass]` para resaltar campos inválidos.
+- Uso de `[ngStyle]` para modificar estilos dinámicamente.
+- Botón de envío deshabilitado mientras el formulario sea inválido.
+- Reinicio automático del formulario después del envío.
+
+---
+
+## Tecnologías utilizadas
+
+- Angular 19.2
+- TypeScript
+- HTML5
+- CSS3
+- Reactive Forms
+
+---
+
+## Instrucciones de instalación y ejecución
+
+### Clonar el repositorio
+
+```bash
+git clone https://github.com/usuario/nombre-repositorio.git
+```
+
+### 2. Ingresar al proyecto
+
+```bash
+cd nombre-repositorio
+```
+
+### 3. Instalar dependencias
+
+```bash
+npm install
+```
+
+### 4. Ejecutar el proyecto
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Abrir en el navegador:
 
 ```bash
-ng generate component component-name
+http://localhost:4200/
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
+
+## Ejemplo de ejecución en consola
 
 ```bash
-ng generate --help
+>Formulario enviado correctamente:
+{
+  nombre: 'Juan Garcia',
+  email: 'juang@email.com',
+  mensaje: 'Hola, este es un mensaje de prueba'
+}
 ```
 
-## Building
+## Capturas de pantalla
 
-To build the project run:
+### Formulario con errores de validación
 
-```bash
-ng build
+Agregar aquí una captura mostrando:
+
+- Campo nombre vacío o con menos de 3 caracteres.
+- Campo email inválido.
+- Mensajes de error visibles.
+- Botón deshabilitado.
+
+```md
+![Formulario con errores](./src/assets/capturas/formulario-error-datos-obligatorios.JPG)
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+```md
+![Formulario con errores](./src/assets/capturas/formulario-error-longitud-mailFormato.png)
 ```
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+### Formulario válido
 
-```bash
-ng e2e
+Agregar aquí una captura mostrando:
+
+- Todos los campos completos correctamente.
+- Estilos aplicados con formulario válido.
+- Botón habilitado.
+
+```md
+![Formulario válido](./src/assets/capturas/formulario-valido.jpg)
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+### Formulario enviado correctamente
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Mensaje “Formulario enviado”.
+- Formulario reseteado.
+
+```md
+![Formulario enviado](./src/assets/capturas/formulario-enviado.png)
+```
+
+---
+
+## Consola con los datos enviados.
+
+```md
+![Consola Datos enviados](./src/assets/capturas/Consola-Datos-Enviados.png)
+```
+
+## Formulario reseteado.
+
+```md
+![Formulario Reseteado](./src/assets/capturas/formulario-reseteado.jpg)
+```
+
+---
+
+## Créditos de Autor
+
+- Nombre del estudiante: Alicia Benitez
+- Curso: Angular Básico
+- Unidad: 2 Directivas y Formularios
+
+---
+
+## Bibliografía y fuentes
+
+### Documentación oficial
+
+- Angular Reactive Forms  
+  https://angular.dev/guide/forms/reactive-forms
+
+- Angular Directives  
+  https://angular.dev/guide/directives
+
+- Angular Forms  
+  https://angular.dev/guide/forms
+
+### Bibliografía
+
+- Freeman, A. _Pro Angular 9_. 6ª edición. Apress, 2020.

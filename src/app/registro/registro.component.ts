@@ -54,10 +54,10 @@ export class RegistroComponent {
       this.formularioEnviado = true;
       this.registroForm.reset();
 
-      // Ocultar mensaje después de 3 segundos
+      // Ocultar mensaje después de 5 segundos
       setTimeout(() => {
         this.formularioEnviado = false;
-      }, 3000);
+      }, 5000);
     }
   }
 }
