@@ -88,9 +88,9 @@ Agregar aquí una captura mostrando:
 - Mensajes de error visibles.
 - Botón deshabilitado.
 
-![Formulario con errores](./src/assets/capturas/formulario-error-datos-obligatorios.JPG)
+![Formulario  error datos requeridos](./src/assets/capturas/formulario-error-datos-obligatorios.jpg)
 
-![Formulario con errores](./src/assets/capturas/formulario-error-longitud-mailFormato.jpg)
+![Formulario con errores de formato o longitud minima](./src/assets/capturas/formulario-error-longitud-mailFormato.JPG)
 
 ---
 
@@ -117,7 +117,7 @@ Agregar aquí una captura mostrando:
 
 ## Consola con los datos enviados.
 
-![Consola Datos enviados](./src/assets/capturas/Consola-Datos-Enviados.jpg)
+![Consola Datos enviados](./src/assets/capturas/Consola-Datos-Enviados.JPG)
 
 ## Formulario reseteado.
 
