@@ -88,13 +88,9 @@ Agregar aquí una captura mostrando:
 - Mensajes de error visibles.
 - Botón deshabilitado.
 
-```md
-![Formulario con errores](./src/assets/capturas/formulario-error-datos-obligatorios.JPG)
-```
+![Formulario con errores](src/assets/capturas/formulario-error-datos-obligatorios.JPG)
 
-```md
-![Formulario con errores](./src/assets/capturas/formulario-error-longitud-mailFormato.png)
-```
+![Formulario con errores](src/assets/capturas/formulario-error-longitud-mailFormato.jpg)
 
 ---
 
@@ -106,9 +102,7 @@ Agregar aquí una captura mostrando:
 - Estilos aplicados con formulario válido.
 - Botón habilitado.
 
-```md
-![Formulario válido](./src/assets/capturas/formulario-valido.jpg)
-```
+![Formulario válido](src/assets/capturas/formulario-valido.jpg)
 
 ---
 
@@ -117,23 +111,17 @@ Agregar aquí una captura mostrando:
 - Mensaje “Formulario enviado”.
 - Formulario reseteado.
 
-```md
 ![Formulario enviado](./src/assets/capturas/formulario-enviado.png)
-```
 
 ---
 
 ## Consola con los datos enviados.
 
-```md
-![Consola Datos enviados](./src/assets/capturas/Consola-Datos-Enviados.png)
-```
+![Consola Datos enviados](./src/assets/capturas/Consola-Datos-Enviados.jpg)
 
 ## Formulario reseteado.
 
-```md
 ![Formulario Reseteado](./src/assets/capturas/formulario-reseteado.jpg)
-```
 
 ---
 
