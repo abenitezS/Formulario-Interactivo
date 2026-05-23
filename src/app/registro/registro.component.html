@@ -6,13 +6,12 @@
 
   <p>Completa los siguientes datos para registrarte en nuestra plataforma.</p>
 
-  <!-- Mensaje de éxito con *ngIf -->
+  <!-- Mensaje de éxito  -->
   @if (formularioEnviado) {
     <div class="success-message">✅ Formulario enviado correctamente</div>
   }
 
   <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
-    <!-- Campo Nombre -->
     <div class="form-group">
       <label>Nombre:</label>
       <input
@@ -23,7 +22,7 @@
         }"
       />
 
-      <!-- Lista de errores con *ngFor -->
+      <!-- Lista de errores con *For -->
       <ul class="errores" *ngIf="f['nombre'].invalid && f['nombre'].touched">
         @for (errorNombre of erroresNombre; track $index) {
           <li>{{ errorNombre }}</li>
@@ -31,7 +30,7 @@
       </ul>
     </div>
 
-    <!-- Campo Email -->
+    <!--  Email -->
     <div class="form-group">
       <label>Email:</label>
       <input
@@ -50,7 +49,7 @@
       }
     </div>
 
-    <!-- Campo Mensaje -->
+    <!--  Mensaje -->
     <div class="form-group">
       <label>Mensaje (opcional):</label>
       <textarea formControlName="mensaje"></textarea>
